@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #13233b;
+  --gold: #c99a42;
+  --cream: #fbf8f1;
+  --slate: #586579;
+  --line: #e6e8ed;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  color: var(--ink);
+  background: #fff;
+  font-family: "DM Sans", sans-serif;
+}
+h1,h2,h3,h4 { font-family: "Manrope", sans-serif; }
+a { text-decoration: none; }
+::selection { background: #ead8b7; color: var(--ink); }
+
+.container-lc {
+  width: min(1180px, calc(100% - 40px));
+  margin: 0 auto;
+}
+
+.section-label {
+  color: var(--gold);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: .18em;
+}
+
+.gradient-hero {
+  background:
+    radial-gradient(circle at 85% 20%, rgba(201,154,66,.20), transparent 24%),
+    radial-gradient(circle at 10% 80%, rgba(12,140,131,.14), transparent 22%),
+    linear-gradient(135deg, #fbf8f1 0%, #ffffff 58%, #f2f6f8 100%);
+}
+
+.luxe-card {
+  border: 1px solid rgba(19,35,59,.10);
+  box-shadow: 0 24px 70px rgba(19,35,59,.10);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
